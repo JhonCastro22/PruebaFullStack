@@ -56,8 +56,6 @@ namespace BackEnd.Controllers
     {
       try
       {
-        //var identity = HttpContext.User.Identity as ClaimsIdentity;
-        //int idUsuarioToken=JwtConfiguratorManager
         await Task.Run(() => sucursalManager.UpdateSucursal(sucursal));
         return Ok();
       }

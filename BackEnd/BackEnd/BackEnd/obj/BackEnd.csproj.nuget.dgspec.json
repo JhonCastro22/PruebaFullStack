@@ -1,0 +1,295 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\BackEnd\\BackEnd.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\BackEnd\\BackEnd.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\BackEnd\\BackEnd.csproj",
+        "projectName": "BackEnd",
+        "projectPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\BackEnd\\BackEnd.csproj",
+        "packagesPath": "C:\\Users\\jacastro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\BackEnd\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jacastro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Business\\Business.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Business\\Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Business\\Business.csproj",
+        "projectName": "Business",
+        "projectPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\jacastro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jacastro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\DataAccess\\DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\jacastro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jacastro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Data\\Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Data\\Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\jacastro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jacastro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

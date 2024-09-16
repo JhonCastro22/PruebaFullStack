@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n51gE/NMVkE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jacastro\\Documents\\PruebaFullStack\\PruebaFullStack\\BackEnd\\BackEnd\\Data\\Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jacastro\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512"
+  ],
+  "logs": []
+}

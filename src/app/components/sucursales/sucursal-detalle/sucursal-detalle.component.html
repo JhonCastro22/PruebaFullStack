@@ -1,0 +1,60 @@
+<div class="card">
+    <form [formGroup]="registroSucursal">
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="">Código</label>
+                <input type="text" formControlName="Codigo" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                <label for="">Descripción</label>
+                <input type="text" formControlName="Descripcion" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="">Dirección</label>
+                <input type="text" formControlName="Direccion" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                <label for="">Identificación</label>
+                <input type="text" formControlName="Identificacion" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="">Moneda</label>
+                <p-dropdown styleClass="roundedC w-100" formControlName="Moneda" [options]="monedas" optionLabel="mndNombre" [filter]="true"
+                    filterBy="mndNombre" [showClear]="true" placeholder="Seleccione">
+                </p-dropdown>
+            </div>
+            <div class="col-sm-6">
+                <label for="">F. Creación</label>
+                <div class="col-12">
+                    <div class="input-group">
+                        <button class="btn btn-outline-secondary"  (click)="d.toggle()" type="button"><i class="fa-solid fa-calendar-days"></i></button>
+                        <input
+                        formControlName="FechaCreacion"
+                            class="form-control"
+                            placeholder="yyyy-mm-dd"
+                            name="dp"
+                            [displayMonths]="displayMonths"
+                            [navigation]="navigation"
+                            [outsideDays]="outsideDays"
+                            [showWeekNumbers]="showWeekNumbers"
+                            ngbDatepicker
+                            #d="ngbDatepicker"
+                        />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <br>
+    </form>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <button class="btn btn-primary" (click)="guardarSucursal()">Guardar</button>
+        </div>
+    </div>
+    <br>
+</div>

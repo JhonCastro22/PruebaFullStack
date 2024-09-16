@@ -6,7 +6,7 @@ import { SucursalesComponent } from './components/sucursales/sucursales.componen
 const routes: Routes = [
   {path:'',redirectTo:'/inicio',pathMatch:'full'},
 {path:'inicio', component:InicioComponent},
-{path:'se',component:SucursalesComponent},
+{path:'sucursales',component:SucursalesComponent},
 {path:'*',redirectTo:'/inicio',pathMatch:'full'}
 ];
 

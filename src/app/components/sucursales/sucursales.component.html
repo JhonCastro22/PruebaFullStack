@@ -1,39 +1,36 @@
+<app-layout></app-layout>
 <div class="row">
-    <div class="col-sm-12 p-4">
-      <!-- Modal 2 -->
-      <ng-template #contentProductos let-modal>
-        <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">Creación Proyecto</h4>
-          <button type="button" class="btn-close" aria-label="Close"
-            (click)="modal.dismiss('Cross click')"></button>
-        </div>
-        <div class="modal-body">
-          <app-sucursal-detalle></app-sucursal-detalle>
-        </div>
+  <div class="col-sm-12 p-4">
+    <!-- Modal 2 -->
+    <p-sidebar styleClass="p-sidebar-sm" *ngIf="sidebarVisible" [(visible)]="sidebarVisible" [fullScreen]="true"
+      position="right">
+      <app-sucursal-detalle (rolGuardado)="onRolGuardado()" [sucursal]="sucursalSeleccionada"></app-sucursal-detalle>
+    </p-sidebar>
+    <button class="btn btn-secondary" routerLink="/inicio">Volver</button>
+    <button class="btn btn-primary" (click)="detailRol(undefined)">Crear
+      Proyecto</button>
+    <hr />
+    <p-table [value]="sucursales" styleClass="p-datatable-striped table-hover" [tableStyle]="{'min-width': '50rem'}">
+      <ng-template pTemplate="header">
+        <tr>
+          <th scope="col">Codigo</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Identificación</th>
+          <th scope="col">F. Creación</th>
+          <th scope="col">Moneda</th>
+        </tr>
       </ng-template>
-      <button class="btn btn-primary-C text-white mt-2 roundedC2" (click)="open(contentProductos)">Crear
-        Proyecto</button>
-      <hr />
-      <p-table [value]="sucursales" styleClass="p-datatable-striped table-hover"
-        [tableStyle]="{'min-width': '50rem'}">
-        <ng-template pTemplate="header">
-          <tr>
-            <th scope="col">Cliente</th>
-            <th scope="col">Unidad Solicitante</th>
-            <th scope="col">Solicitante</th>
-            <th scope="col">Comercial</th>
-            <th scope="col">F. Creación</th>
-          </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-sucursal>
-          <tr (click)="open(contentProductos)">
-            <td scope="row">{{sucursal.scrCodigo}}</td>
-            <td>{{sucursal.scrDescripcion}}</td>
-            <td>{{sucursal.scrDireccion}}</td>
-            <td>{{sucursal.scrIdentificacion}}</td>
-            <td>{{sucursal.scrFechaCreacion}}</td>
-          </tr>
-        </ng-template>
-      </p-table>
-    </div>
+      <ng-template pTemplate="body" let-sucursal>
+        <tr (click)="detailRol(sucursal)">
+          <td scope="row">{{sucursal.scrCodigo}}</td>
+          <td>{{sucursal.scrDescripcion}}</td>
+          <td>{{sucursal.scrDireccion}}</td>
+          <td>{{sucursal.scrIdentificacion}}</td>
+          <td>{{sucursal.scrFechaCreacion}}</td>
+          <td>{{sucursal.scrMndId}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
   </div>
+</div>

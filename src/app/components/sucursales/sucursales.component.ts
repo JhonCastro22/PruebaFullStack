@@ -14,7 +14,9 @@ export class SucursalesComponent {
   registroSucursal: FormGroup;
   closeResult = '';
   sucursales: Sucursal[] = [];
-  constructor(private sucursalService: SucursalService, config: NgbNavConfig,private fb: FormBuilder) {
+  sucursalSeleccionada!: Sucursal;
+  sidebarVisible: boolean = false;
+  constructor(private sucursalService: SucursalService, config: NgbNavConfig, private fb: FormBuilder) {
     this.registroSucursal = this.fb.group({
       Codigo: [''],
       Descripcion: [''],
@@ -25,33 +27,30 @@ export class SucursalesComponent {
     });
   }
   ngOnInit() {
+    this.sucursalSeleccionada = new Sucursal;
     this.GetSucursales();
   }
   GetSucursales() {
     const partialSucursal: Partial<Sucursal> = {
     }
     this.sucursalService.GetListaSucursals(partialSucursal).subscribe(data => {
+      // console.log(data);
       this.sucursales = data ?? [];
     });
   }
-  open(content: TemplateRef<any>) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'xl' }).result.then(
-      (result) => {
-        this.closeResult = `Closed with: ${result}`;
-      },
-      (reason) => {
-        this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-      },
-    );
+  onRolGuardado(): void {
+    this.sidebarVisible = false;
+    this.GetSucursales();
   }
-  private getDismissReason(reason: any): string {
-    switch (reason) {
-      case ModalDismissReasons.ESC:
-        return 'by pressing ESC';
-      case ModalDismissReasons.BACKDROP_CLICK:
-        return 'by clicking on a backdrop';
-      default:
-        return `with: ${reason}`;
+  detailRol(item?: Sucursal) {
+    if (item) {
+      this.sidebarVisible = true;
+      this.sucursalSeleccionada = item;
+      // console.log(this.sucursalSeleccionada);
+    } else {
+      this.sucursalSeleccionada = new Sucursal();
+      this.sidebarVisible = true;
     }
   }
+
 }

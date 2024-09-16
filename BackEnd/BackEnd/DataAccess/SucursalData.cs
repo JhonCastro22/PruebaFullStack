@@ -38,7 +38,7 @@ namespace DataAccess
         Data.ScrDireccion = item.ScrDireccion;
         Data.ScrIdentificacion= item.ScrIdentificacion;
         Data.ScrFechaCreacion = item.ScrFechaCreacion;
-        Data.ScrMndId = item.MndId;
+        Data.ScrMndId = item.ScrMndId;
         list.Add(Data);
       }
       return list;

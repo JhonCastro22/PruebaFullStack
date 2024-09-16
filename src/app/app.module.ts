@@ -5,6 +5,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SidebarModule } from 'primeng/sidebar';
 
 import { AppComponent } from './app.component';
 import { SucursalesComponent } from './components/sucursales/sucursales.component';
@@ -31,7 +32,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     TableModule,
     DropdownModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SidebarModule
   ],
   providers: [SucursalService],
   bootstrap: [AppComponent]

@@ -11,7 +11,6 @@ import { Sucursal } from '../../../models/sucursal';
 })
 export class SucursalDetalleComponent implements OnChanges {
   @Input() sucursal!: Sucursal;
-  // @Output() rolGuardado: EventEmitter<void> = new EventEmitter<void>();
   monedas: Moneda[] = [];
   registroSucursal!: FormGroup;
   displayMonths = 2;
@@ -31,19 +30,17 @@ export class SucursalDetalleComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['sucursal'] && changes['sucursal'].currentValue) {
-      console.log(this.sucursal);
-      this.initFormSucursal(); // Inicializar el formulario cada vez que cambie la sucursal seleccionada
+      this.initFormSucursal(); 
     }
   }
 
   initFormSucursal(): void {
-    // console.log(this.sucursal);
     if (this.sucursal) {
       const fechaCreacion = this.sucursal.scrFechaCreacion
         ? this.convertirFecha(this.sucursal.scrFechaCreacion)
         : null;
       const monedaFiltrada = this.monedas.find(moneda => moneda.mndId === this.sucursal.scrMndId);
-      // Inicializa el formulario usando las propiedades de la sucursal seleccionada
+      
       this.registroSucursal = this.fb.group({
         Codigo: [this.sucursal.scrCodigo],
         Descripcion: [this.sucursal.scrDescripcion],
@@ -61,7 +58,7 @@ export class SucursalDetalleComponent implements OnChanges {
 
       this.sucursalService.getMoneda(moneda).subscribe(data => {
         this.monedas = data ?? [];
-        resolve(); // Llama a resolve una vez que las monedas están cargadas
+        resolve();
       });
     });
   }
@@ -69,10 +66,9 @@ export class SucursalDetalleComponent implements OnChanges {
   guardarSucursal() {
     const fechaCreacion = this.registroSucursal.value.FechaCreacion;
 
-    // Asegurarse de que formateas la fecha correctamente
     const formattedDate = new Date(fechaCreacion.year, fechaCreacion.month - 1, fechaCreacion.day);
 
-    // Extraer solo el mndId de la moneda seleccionada
+    
     const monedaSeleccionada = this.registroSucursal.get('Moneda')?.value;
     const sucursalSave: Sucursal = {
       scrCodigo: this.registroSucursal.get('Codigo')?.value,
@@ -80,7 +76,7 @@ export class SucursalDetalleComponent implements OnChanges {
       scrDireccion: this.registroSucursal.get('Direccion')?.value,
       scrIdentificacion: this.registroSucursal.get('Identificacion')?.value,
       scrFechaCreacion: formattedDate,
-      scrMndId: monedaSeleccionada ? monedaSeleccionada.mndId : null // Extraer el ID de la moneda seleccionada
+      scrMndId: monedaSeleccionada ? monedaSeleccionada.mndId : null
     };
     console.log(sucursalSave)
     this.sucursalService.InsertSucursal(sucursalSave).subscribe(data => {
@@ -91,17 +87,17 @@ export class SucursalDetalleComponent implements OnChanges {
     const date = new Date(fecha);
     return {
       year: date.getFullYear(),
-      month: date.getMonth() + 1, // Los meses empiezan en 0 en JavaScript, por eso se suma 1
+      month: date.getMonth() + 1, 
       day: date.getDate()
     };
   }
   editarSucursal(){
       const fechaCreacion = this.registroSucursal.value.FechaCreacion;
   
-      // Asegurarse de que formateas la fecha correctamente
+     
       const formattedDate = new Date(fechaCreacion.year, fechaCreacion.month - 1, fechaCreacion.day);
   
-      // Extraer solo el mndId de la moneda seleccionada
+    
       const monedaSeleccionada = this.registroSucursal.get('Moneda')?.value;
       const sucursalSave: Sucursal = {
         scrCodigo: this.registroSucursal.get('Codigo')?.value,

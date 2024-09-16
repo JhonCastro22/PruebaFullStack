@@ -34,7 +34,6 @@ export class SucursalesComponent {
     const partialSucursal: Partial<Sucursal> = {
     }
     this.sucursalService.GetListaSucursals(partialSucursal).subscribe(data => {
-      // console.log(data);
       this.sucursales = data ?? [];
     });
   }
@@ -46,7 +45,6 @@ export class SucursalesComponent {
     if (item) {
       this.sidebarVisible = true;
       this.sucursalSeleccionada = item;
-      // console.log(this.sucursalSeleccionada);
     } else {
       this.sucursalSeleccionada = new Sucursal();
       this.sidebarVisible = true;
